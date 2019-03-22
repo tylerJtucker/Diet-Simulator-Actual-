@@ -132,5 +132,8 @@
   <ItemGroup>
     <None Include="Resources\Salad-PNG-Clipart.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\524971553260070.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

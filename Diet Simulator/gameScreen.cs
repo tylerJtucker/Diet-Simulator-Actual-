@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 
 namespace Diet_Simulator
@@ -30,6 +31,7 @@ namespace Diet_Simulator
         int score = 0;
         List<food> foods = new List<food>();
         List<food> goodFoods = new List<food>();
+        SoundPlayer Crunch = new SoundPlayer(Properties.Resources.Crunch);
 
         public gameScreen()
         {
@@ -151,6 +153,7 @@ namespace Diet_Simulator
             {
                 if (food.Collision(f) == true)
                 {
+                    Crunch.Play();
                     f.Move(45);
                     foods[0].x = mouthSize / 2 + mouthX - 20;
                     Refresh();
@@ -173,6 +176,7 @@ namespace Diet_Simulator
             {
                 if (food.Collision(gf) == true)
                 {
+                    Crunch.Play();
                     gf.Move(45);
                     goodFoods[0].x = mouthSize / 2 + mouthX - 20;
                     score += 50;
